@@ -3,7 +3,6 @@ import {
   FileCheck,
   AlertCircle,
   Lightbulb,
-  Download,
 } from "lucide-react";
 import { ManualSection } from "./components/ManualSection";
 import screenshot1 from "figma:asset/6d83f0f3df918859dcd477c0eba9e126f8bf516a.png";
@@ -16,22 +15,8 @@ import imgMatchingResult from "./assets/matching-result.png";
 import imgUnregistered from "./assets/unregistered.png";
 
 export default function App() {
-  const handlePrintPDF = () => {
-    window.print();
-  };
-
   return (
     <div className="min-h-screen bg-gray-50">
-      <div className="print:hidden fixed top-6 right-6 z-50">
-        <button
-          onClick={handlePrintPDF}
-          className="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg shadow-lg transition-colors"
-        >
-          <Download className="w-5 h-5" />
-          PDF로 저장하기
-        </button>
-      </div>
-
       <div className="max-w-4xl mx-auto px-6 py-12">
         <div className="bg-white rounded-lg shadow-sm p-8 mb-8">
           <div className="flex items-center gap-3 mb-4">
