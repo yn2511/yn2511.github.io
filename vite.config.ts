@@ -4,7 +4,8 @@ import tailwindcss from '@tailwindcss/vite';
 import path from 'path';
 
 export default defineConfig({
-  base: '/',
+  // Vercel: 루트(/) / GitHub Pages(alnang-cp-manual): 서브경로
+  base: process.env.VERCEL ? '/' : process.env.NODE_ENV === 'production' ? '/alnang-cp-manual/' : '/',
   plugins: [react(), tailwindcss()],
   resolve: {
     extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
